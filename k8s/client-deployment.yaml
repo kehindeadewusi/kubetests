@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: client-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels: 
       component: web
@@ -15,5 +15,12 @@ spec:
       containers: 
         - name: client
           image: kehindeadewusi/mclient
+          resources:
+            requests:
+              memory: 200M
+              cpu: 100m
+            limits:
+              memory: 200M
+              cpu: 100m
           ports:
             - containerPort: 3000

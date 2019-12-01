@@ -15,6 +15,13 @@ spec:
       containers:
         - name: server
           image: kehindeadewusi/mserver
+          resources:
+            requests:
+              memory: 200M
+              cpu: 100m
+            limits:
+              memory: 200M
+              cpu: 100m
           ports: 
             - containerPort: 5000
           env:
