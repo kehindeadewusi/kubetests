@@ -1,6 +1,6 @@
-docker build -t kehindeadewusi/mclient:lastest -t kehindeadewusi/mclient:$SHA -f ./client/Dockerfile ./client
-docker build -t kehindeadewusi/mserver:lastest -t kehindeadewusi/mserver:$SHA -f ./server/Dockerfile ./server
-docker build -t kehindeadewusi/mworker:lastest -t kehindeadewusi/mworker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t kehindeadewusi/mclient:latest -t kehindeadewusi/mclient:$SHA -f ./client/Dockerfile ./client
+docker build -t kehindeadewusi/mserver:latest -t kehindeadewusi/mserver:$SHA -f ./server/Dockerfile ./server
+docker build -t kehindeadewusi/mworker:latest -t kehindeadewusi/mworker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push kehindeadewusi/mclient:latest
 docker push kehindeadewusi/mserver:latest
