@@ -1,7 +1,8 @@
 apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata:
-  name: introspec-xyz-tls
+  namespace: default
+  name: introspec-xyz
 spec:
   secretName: introspec-xyz-tls
   issuerRef: 
@@ -9,11 +10,6 @@ spec:
     kind: ClusterIssuer
   commonName: introspec.xyz
   dnsNames: 
-    - introspec.xyz
-  acme:
-    config:
-      - http01:
-          ingressClass: nginx
-        domains:
-          - introspec.xyz
+  - introspec.xyz
+
           
